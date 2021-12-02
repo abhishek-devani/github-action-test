@@ -2,7 +2,12 @@ name: Actions Worlflow
 
 # on: [push, pull_request]
 on:
-  push:
+  # push:
+
+  schedule:
+    - cron: "* * * * *"
+    - cron: "* * * * *"
+
   pull_request:
     types: [closed, assigned, opened, reopened]
 
