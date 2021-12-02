@@ -18,6 +18,10 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+     
+      - name: payload
+        run: ${{ github.event.client_payload }}
+
       - name: List Files
         run: |
           pwd
@@ -26,12 +30,15 @@ jobs:
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
           echo "${{ github.token }}"
+     
       - name: Checkout
         uses: actions/checkout@v1
+     
       - name: List Files after Checkout
         run: |
           pwd
           ls -a
+     
       - name: Simple JS Action
         id: greet
         uses: actions/hello-world-javascript-action@v1
