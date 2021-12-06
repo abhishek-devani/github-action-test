@@ -11,14 +11,14 @@ jobs:
         
         include:
           - os: ubuntu-latest
-            node-version: 8
+            node_version: 8
             is_ubuntu_8: "true"
         
         exclude:
           - os: macos-latest
-            node-version: 8
+            node_version: 8
           - os: macos-latest
-            node-version: 10
+            node_version: 10
 
       # max-parallel: 0
       # fail-fast: true (if any of the job fails next job won't work)
